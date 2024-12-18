@@ -61,7 +61,9 @@ export const PieChartView: React.FC<PieChartViewProps> = ({ data }) => (
       </Pie>
       <Tooltip formatter={(value) => `${value} minutes`} />
       <Legend
-        formatter={(value, entry) => `${value} (${entry?.payload?.duration}m)`}
+        formatter={(value, entry: any) =>
+          `${value} (${entry?.payload?.duration}m)`
+        }
       />
     </PieChart>
   </ResponsiveContainer>
